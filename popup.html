@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy Peek</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Policy Peek</h1>
+            <p class="tagline">AI-powered privacy policy analyzer</p>
+        </header>
+        
+        <main class="main-content">
+            <div class="risk-indicator" id="riskIndicator">
+                <div class="risk-badge" id="riskBadge">
+                    <span id="riskLevel">Analyzing...</span>
+                </div>
+                <div class="risk-description" id="riskDescription">
+                    Checking current website's privacy policy...
+                </div>
+            </div>
+            
+            <div class="manual-analysis">
+                <h3>Analyze Custom Policy</h3>
+                <textarea 
+                    id="policyText" 
+                    placeholder="Paste Terms of Service or Privacy Policy text here..."
+                    rows="4"
+                ></textarea>
+                <button id="analyzeButton" class="analyze-btn">
+                    Analyze Policy
+                </button>
+            </div>
+            
+            <div class="results" id="results" style="display: none;">
+                <h3>Analysis Results</h3>
+                <div class="summary" id="summary"></div>
+                <div class="key-points" id="keyPoints"></div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

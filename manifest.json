@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Policy Peek",
+  "description": "Detect and analyze Terms of Service or Privacy Policies.",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "scripting", 
+    "activeTab", 
+    "storage",
+    "tabs",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "popup.css", "popup.js", "config.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+
+
